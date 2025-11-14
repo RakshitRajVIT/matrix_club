@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Matrix Club - VIT Bhopal</title>
+    <meta name="description" content="The Matrix Club at VIT Bhopal - A community of creators, innovators, and storytellers">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000000;
+            color: #00FF41;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid #00FF41;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #00FF41;
+            text-decoration: none;
+            font-size: 14px;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.7;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: 1px solid #00FF41;
+            background: transparent;
+            color: #00FF41;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #00FF41;
+            color: #000000;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #00CC33;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #00FF41;
+            color: #000000;
+            padding: 15px 30px;
+            font-size: 16px;
+        }
+
+        .btn-primary:hover {
+            background: #00CC33;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            border-top: 1px solid #00FF41;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #00CC33;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 20px;
+            border-top: 1px solid #00FF41;
+        }
+
+        .gallery h2 {
+            font-size: 48px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            border: 1px solid #00FF41;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            background: rgba(0, 255, 65, 0.05);
+        }
+
+        .gallery-item:hover {
+            border-color: #00FF41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+
+        .gallery-item-content {
+            text-align: center;
+        }
+
+        .gallery-item-content .icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #00FF41;
+            padding: 40px 20px;
+            margin-top: 80px;
+            text-align: center;
+            color: #00CC33;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .about h2,
+            .gallery h2 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">THE MATRIX CLUB</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#events">Events</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#" class="btn">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Welcome to The Matrix</h1>
+            <p>Decoding Creativity | Your Reality, Reimagined.</p>
+            <div class="hero-buttons">
+                <a href="#events" class="btn btn-primary">Explore Our Events</a>
+                <a href="#about" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Enter The Matrix</h2>
+            <p>
+                We are a community of creators, innovators, and storytellers. From filmmaking 
+                and graphic design to animation and VFX, we explore every pixel of the digital world.
+            </p>
+            <p>
+                Join us in pushing the boundaries of multimedia art and technology, where your 
+                creative vision becomes reality.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Glimpses of Media Morphosis</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-item-content">
+                    <div class="icon">📸</div>
+                    <p>Event Photo 1</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-item-content">
+                    <div class="icon">📸</div>
+                    <p>Event Photo 2</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-item-content">
+                    <div class="icon">📸</div>
+                    <p>Event Photo 3</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-item-content">
+                    <div class="icon">📸</div>
+                    <p>Event Photo 4</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-item-content">
+                    <div class="icon">📸</div>
+                    <p>Event Photo 5</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-item-content">
+                    <div class="icon">📸</div>
+                    <p>Event Photo 6</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 The Matrix Club - VIT Bhopal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
